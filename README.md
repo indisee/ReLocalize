@@ -18,3 +18,5 @@ script will go through Localizable.strings and generate clean cases for *some en
 
 ### Not working
 After all that above you will have you source code ready for localization. You will have to adapt you project to be able to read S.key.localizedString and add created cases somewhere, for example read 'example'
+  
+  *example goes from https://stackoverflow.com/a/28213905/1140941
