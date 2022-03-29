@@ -5,7 +5,7 @@ script goes through project and renames localization call "key".localized to str
 
 ### How?
 - clean your Localizable.strings from all comments
-- make sure there're no \n before '=' in Localizable.strings
+- make sure there're no '\n' before '=' in Localizable.strings
 - make script executable
 > chmod +x <path>/main.swift
 - run in terminal 
@@ -14,7 +14,7 @@ script goes through project and renames localization call "key".localized to str
 **no < or > needed*
 
 
-script will go through Localizable.strings and generate clean cases for *some enum*, will put that data to empty file (-f), go through source code and rename all calls that looks like **< key >.localized** to **S.< case >.localizedString**.
+script will go through Localizable.strings and generate clean cases for *some enum*, will put that data to empty file (-f), go through source code and rename all calls that looks like **< key >.localized** to **S.< case >.localizedString** (you can change both to whatever)
 
 ### Not working
 After all that above you will have you source code ready for localization. You will have to adapt you project to be able to read S.key.localizedString and add created cases somewhere, for example read 'example'
