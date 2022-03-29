@@ -1,5 +1,8 @@
 # Relocalize
 
+### Why?
+I have project with localization done with *"localization key".localized*, want it to be done with strictly typed enum cases *enum.case.localizedString*, ***don't want to do it manually***
+
 ### What?
 script goes through project and renames localization call "key".localized to strictly typed enum calls like S.key.localizedString
 
@@ -12,6 +15,9 @@ script goes through project and renames localization call "key".localized to str
 > main.swift -s < path to source code folder > -l < path to main Localizable.strings > -f < path to any empty file >
 
 **no < or > needed*
+
+  
+**"-l","-s","-f" — all flags are required, didn't test what will be if some are not provided**
 
 
 script will go through Localizable.strings and generate clean cases for *some enum*, will put that data to empty file (-f), go through source code and rename all calls that looks like **< key >.localized** to **S.< case >.localizedString** (you can change both to whatever)
